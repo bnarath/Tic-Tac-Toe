@@ -28,10 +28,10 @@ Minimize the opponent’s win. This objective is chosen because of the high prob
 
 RL agent, Random player, and Judge are present in the framework.
 
-### Random player
+#### Random player
 Random player is the opponent to the RL agent. Random Player, as the name suggests plays randomly, by choosing one of the available empty slot as the move.
 
-### Judge
+#### Judge
 Judge has the following responsibilities.
 -	Decide which player starts the game (Gives chance to each player in alternative games)
 - Regulate the game (whose turn when, as per the tic tac toe rules, alternative again)
@@ -39,15 +39,33 @@ Judge has the following responsibilities.
 -	Notify both the players about the end of the game and who is the winner
 -	Keep the statistics for evaluating the performance
 
-### Reward Structure:
+#### Reward Structure:
 -	Win: 1
 -	Draw: -1
 -	Loss: -10
 -	Any action leading to none of the above, results in 0 reward
 
-### Returns and Value functions:
+#### Returns and Value functions:
 After each episode, RL agent updates the value function using Monte Carlo updates. TD method is unnecessary here, as none of the states get repeated in an episode.
 
+
+### Algorithm to update the Value Function after an episode:
+
+### Algorithm to choose At at state St:
+
+### Special Techniques used in Learning Efficiently
+-	Make use of symmetry of Tic – Tac – Toe board
+  One game has 5 alternatives, which corresponds to 
+  -	<a href="https://www.codecogs.com/eqnedit.php?latex=90^{\degree}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?90^{\degree}" title="90^{\degree}" /></a> rotation of the board, 
+  -	<a href="https://www.codecogs.com/eqnedit.php?latex=180^{\degree}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?90^{\degree}" title="180^{\degree}" /></a> degree rotation of the board, 
+	- <a href="https://www.codecogs.com/eqnedit.php?latex=270^{\degree}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?90^{\degree}" title="270^{\degree}" /></a> rotation of the board, 
+  -	Diagonal flip of the board, 
+  -	Anti-diagonal flip of the board
+Refer functions update_values and Transform Dictionary in the code for the details
+
+- Learn from opponent’s moves
+On top of self-movements leading to win, loss, draw, we also can learn from opponent’s moves
+Refer function update_values in the code for the details
 
 
 
