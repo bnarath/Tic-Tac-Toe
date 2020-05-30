@@ -57,8 +57,8 @@ After each episode, RL agent updates the value function using Monte Carlo update
 -	Make use of symmetry of Tic – Tac – Toe board
   One game has 5 alternatives, which corresponds to 
   -	<a href="https://www.codecogs.com/eqnedit.php?latex=90^{\degree}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?90^{\degree}" title="90^{\degree}" /></a> rotation of the board, 
-  -	<a href="https://www.codecogs.com/eqnedit.php?latex=180^{\degree}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?90^{\degree}" title="180^{\degree}" /></a> degree rotation of the board, 
-	- <a href="https://www.codecogs.com/eqnedit.php?latex=270^{\degree}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?90^{\degree}" title="270^{\degree}" /></a> rotation of the board, 
+  -	<a href="https://www.codecogs.com/eqnedit.php?latex=180^{\degree}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?180^{\degree}" title="180^{\degree}" /></a> degree rotation of the board, 
+  - <a href="https://www.codecogs.com/eqnedit.php?latex=270^{\degree}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?270^{\degree}" title="270^{\degree}" /></a> rotation of the board, 
   -	Diagonal flip of the board, 
   -	Anti-diagonal flip of the board
 Refer functions update_values and Transform Dictionary in the code for the details
