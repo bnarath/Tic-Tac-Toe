@@ -61,11 +61,34 @@ After each episode, RL agent updates the value function using Monte Carlo update
     - <a href="https://www.codecogs.com/eqnedit.php?latex=270^{\degree}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?270^{\degree}" title="270^{\degree}" /></a> rotation of the board, 
     -	Diagonal flip of the board, 
     -	Anti-diagonal flip of the board
-Refer functions update_values and Transform Dictionary in the code for the details
+Refer functions <i>update_values</i> and <i>Transform Dictionary</i> in the code for the details
 
 - Learn from opponent’s moves
 On top of self-movements leading to win, loss, draw, we also can learn from opponent’s moves
-Refer function update_values in the code for the details
+Refer function <i>update_values</i> in the code for the details
+
+Thus, every episode leads to x12 times learning, implies 12 times updating of value function of states involved in those learning paths
+
+### <a href=Tic-Tac-Toe-Code.ipynb>Code Reference:</a>
+
+-	Section# Dependencies: Lists out the required libraries as well as the package version requirements
+-	Section# Change the dimension of the board here. The same code can be used for any dimension of  Tic-Tac-Toe
+-	Section# Transform Dictionary: Function to transform the Tic-Tac-Toe board to 6 transformations
+-	Section# Import the previous learning: Open with previous learning (which is saved at the end)
+-	Section# RL Agent – RL Agent class
+-	Section# Random Player – Random Player class
+-	Section# Judge – Judge class
+-	Section# Check performance – Check Statistics and plots 
+-	Section# Saving values to pickle file
+
+### Performance
+Performance through 10000 games
+<div style="text-align:center"><img src="images/photo3.png"></div>
+
+In comparison with 3x3, Performance through 10000 games for 3x3
+<div style="text-align:center"><img src="images/photo4.png"></div>
+
+<strong>The same algorithm can be used for any board, the learning for smaller dimension games are faster whereas 6x6 takes much more steps for proper learning because of the sparse nature</strong>
 
 
 
